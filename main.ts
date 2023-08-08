@@ -1,13 +1,6 @@
 OLED.init(128, 64)
-RTC_DS1307.DateTime(
-2023,
-8,
-8,
-14,
-17,
-19
-)
-basic.forever(function () {
+RTC_DS1307.DateTime(2023, 8, 8, 14, 17, 19)
+basic.forever(function on_forever() {
     OLED.clear()
     OLED.writeNum(RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR))
     OLED.writeString(":")
